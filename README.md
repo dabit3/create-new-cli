@@ -18,9 +18,9 @@ npm i -g create-new-cli
 create-new-cli
 ```
 
-### In the above step, we will create a name and a command for our cli. The name will be the folder created for our project, and the command will be what the application is registered as in the npm registry, which will be the name field in our newly created package.json.
+##### In the above step, we will create a name and a command for our cli. The name will be the folder created for our project, and the command will be what the application is registered as in the npm registry, which will be the name field in our newly created package.json.
 
-### We will reference these two items as <YourProjectName> and <your-project-command> in the following steps.
+##### We will reference these two items as `<YourProjectName>` and `<your-project-command>` in the following steps.
 
 3. CD into newly created project directory   
 ```
