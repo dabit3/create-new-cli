@@ -1,4 +1,4 @@
-# Create New Cli
+![Create New CLI](http://i.imgur.com/fz12yVT.png)
 
 ### CLI Project Generator
 
