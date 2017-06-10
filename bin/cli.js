@@ -47,7 +47,7 @@ const authorPrompt = {
 };
 
 console.log('');
-console.log("Let's get started createing your new CLI.")
+console.log("Let's get started creating your new CLI.")
 console.log('');
 
 inquirer.prompt([
