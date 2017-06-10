@@ -58,7 +58,7 @@ const build = (appName, author, command, repo = false) => {
   }
 }
 
-function doReWrites(appName, author, command, repo) {
+function doReWrites(appName, author, command) {
   commands.rewritePackageJson(`${appName}/package.json`, author, command)
     .then(() => {
       commands.rewriteBuild(`${appName}/bin/build.js`, appName)
