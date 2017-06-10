@@ -1,7 +1,7 @@
 {
   "name": "create-new-cli",
   "version": "0.1.1",
-  "description": "",
+  "description": "Nodejs Project CLI Generator",
   "bin": "bin/cli.js",
   "main": "index.js",
   "scripts": {
