@@ -1,6 +1,6 @@
 {
   "name": "create-new-cli",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "",
   "bin": "bin/cli.js",
   "main": "index.js",
