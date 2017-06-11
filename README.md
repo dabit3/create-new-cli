@@ -7,7 +7,7 @@ With the rise in the popularity of projects like Create React App, Angular CLI, 
 This project will allow developers to easily and quickly create CLIs that give them the most basic functionality in just a few seconds, and publish their projects to npm for users to install and start using right away.
 
 ### Check out this video walkthrough that will show you how to create a new CLI using create-new-cli
-[![](http://i.imgur.com/F7fx2c6.png)](https://www.youtube.com/watch?v=rUWxX0NUfM8)
+[![](http://i.imgur.com/F7fx2c6.png)](https://www.youtube.com/watch?v=gSZGWQS8aZ0)
 
 ## To create and publish your own CLI:
 
