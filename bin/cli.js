@@ -9,7 +9,6 @@ const build = require('./build');
 const pkg = require('../package.json');
 
 let projectName;
-
 let helpCalled = false;
 
 program
@@ -49,7 +48,6 @@ const authorPrompt = {
 };
 
 setImmediate(() => {
-  console.log('helpCalled:', helpCalled);
   if (!helpCalled) {
     console.log('');
     console.log("Let's get started creating your new CLI.")
