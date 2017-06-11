@@ -10,15 +10,17 @@ const pkg = require('../package.json');
 
 let projectName;
 
+let helpCalled = false;
+
 program
   .version(pkg.version)
-  .arguments('<project-directory>')
   .action(name => {
     projectName = name;
   })
 
 program.on('--help', function() {
   help();
+  helpCalled = true;
 });
 
 const isRepoPrompt = {
@@ -46,29 +48,40 @@ const authorPrompt = {
   message: 'CLI author name:',
 };
 
-console.log('');
-console.log("Let's get started creating your new CLI.")
-console.log('');
+setImmediate(() => {
+  console.log('helpCalled:', helpCalled);
+  if (!helpCalled) {
+    console.log('');
+    console.log("Let's get started creating your new CLI.")
+    console.log('');
 
-inquirer.prompt([
-  commandPrompt,
-  namePrompt,
-  isRepoPrompt,
-  authorPrompt,
-]).then(answers => {
-  const command = dashify(answers.command);
-  const name = answers.name;
-  const isRepo = answers.isrepo === 'repo';
-  const author = answers.author;
+    inquirer.prompt([
+      commandPrompt,
+      namePrompt,
+      isRepoPrompt,
+      authorPrompt,
+    ]).then(answers => {
+      const command = dashify(answers.command);
+      const name = answers.name;
+      const isRepo = answers.isrepo === 'repo';
+      const author = answers.author;
 
-  if (isRepo) {
-    repoPrompt(name, author, command)
-  } else (
-    build(name, author, command)
-  )
+      if (isRepo) {
+        repoPrompt(name, author, command)
+      } else (
+        build(name, author, command)
+      )
+    })
+  }
 })
 
-function folderPrompt(name, author) {}
+function help() {
+  console.log('');
+  console.log(`    No arguments are required.`);
+  console.log('');
+  console.log(`    If you have any issues or requests, please file an issue at ${chalk.cyan('https://github.com/dabit3/create-new-cli/issues')}`);
+  console.log('');
+}
 
 function repoPrompt(name, author, command) {
   const gitPrompt = {
