@@ -44,7 +44,6 @@ const installPackages = () => {
 
 const build = (appName) => {
   cp('-r', __dirname + '/../src/.', appName);
-  chmod(755, path.join(appName, 'scripts', 'copy.js'));
   console.log('----------------------------------------------------------');
   figlet('PROJECTNAME', function(err, data) {
     if (err) {
