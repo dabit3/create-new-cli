@@ -30,12 +30,12 @@ create-new-cli
 cd <YourProjectName>
 ```
 
-4. Publish to npm   
+4. Publish to npm (or link to test locally)   
 ```
-npm publish
+npm publish OR npm link
 ```
 
-5. Install new cli globally on your own machine   
+5. Install new cli globally on your own machine (skip this step if you ran npm link)    
 ```
 npm i -g <your-project-command>
 ```
